@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ include "kubevirt-chart.fullname" . }}-io-operator
+  labels:
+    operator.kubevirt.io: ""
+    rbac.authorization.k8s.io/aggregate-to-admin: "true"
+  {{- include "kubevirt-chart.labels" . | nindent 4 }}
+rules:
+- apiGroups:
+  - kubevirt.io
+  resources:
+  - kubevirts
+  verbs:
+  - get
+  - delete
+  - create
+  - update
+  - patch
+  - list
+  - watch
+  - deletecollection

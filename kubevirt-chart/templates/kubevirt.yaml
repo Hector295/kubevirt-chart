@@ -1,0 +1,14 @@
+apiVersion: kubevirt.io/v1
+kind: KubeVirt
+metadata:
+  name: {{ include "kubevirt-chart.fullname" . }}-kubevirt
+  labels:
+  {{- include "kubevirt-chart.labels" . | nindent 4 }}
+spec:
+  certificateRotateStrategy: {}
+  configuration:
+    developerConfiguration:
+      featureGates: []
+  customizeComponents: {}
+  imagePullPolicy: IfNotPresent
+  workloadUpdateStrategy: {}
