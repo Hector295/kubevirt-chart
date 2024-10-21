@@ -1,0 +1,9 @@
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: {{ include "kubevirt-chart.fullname" . }}-cluster-critical
+  labels:
+  {{- include "kubevirt-chart.labels" . | nindent 4 }}
+description: This priority class should be used for core kubevirt components only.
+globalDefault: false
+value: 1000000000
