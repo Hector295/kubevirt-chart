@@ -2,6 +2,7 @@ annotations:
   catalog.cattle.io/display-name: KubeVirt
   catalog.cattle.io/kube-version: '>=1.22.0-0'
   catalog.cattle.io/release-name: kubevirt
+  catalog.cattle.io/namespace: kubevirt
 apiVersion: v2
 appVersion: v1.3.1
 description: KubeVirt is a Kubernetes extension for running virtual machines alongside container workloads.
