@@ -41,7 +41,7 @@ spec:
         - name: WATCH_NAMESPACE
           valueFrom:
             fieldRef:
-              fieldPath: metadata.annotations[olm.targetNamespaces]
+              fieldPath: metadata.annotations['olm.targetNamespaces']
         - name: KUBEVIRT_VERSION
           value: {{ quote .Values.virtOperator.virtOperator.env.kubevirtVersion }}
         - name: KUBERNETES_CLUSTER_DOMAIN
