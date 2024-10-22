@@ -4,7 +4,6 @@ metadata:
   name: kubevirts.kubevirt.io
   labels:
     operator.kubevirt.io: ""
-  {{- include "kubevirt-chart.labels" . | nindent 4 }}
 spec:
   group: kubevirt.io
   names:
